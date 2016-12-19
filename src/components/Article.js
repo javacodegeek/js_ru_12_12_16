@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CommentList from './CommentList'
 
 export default class Article extends Component {
     state = {
@@ -31,10 +32,12 @@ export default class Article extends Component {
     }
 
     getBody() {
+        const { article } = this.props
         if (!this.state.isOpen) return null
         return (
             <section>
                 {this.props.article.text}
+                <CommentList article = {article} />
             </section>
         )
     }

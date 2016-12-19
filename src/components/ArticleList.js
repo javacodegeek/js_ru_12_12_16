@@ -11,6 +11,7 @@ export default function ArticleList(props) {
                 {/*some comment*/}
                 {articleElements}
             </ul>
+            
         </div>
     )
 }
